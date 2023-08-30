@@ -818,3 +818,72 @@ Boo(Add<long, long>, 5, 6);
 Boo(op:long:long:long, a:long, b:long) console.Write(op(a, b)::string);
 Add(a, b) => a + b;
 ```
+
+## Namespaces in Kolibri
+
+### Introduction
+
+Namespaces are a critical feature in many programming languages, helping to organize code, manage scope, and prevent naming collisions. In Kolibri, the `space` keyword is used to define a namespace. It offers you the ability to keep related functionalities together under a single umbrella, facilitating cleaner and more maintainable code.
+
+### Syntax
+
+Declaring a namespace in Kolibri is straightforward:
+
+```kolibri
+space name:
+```
+
+To call a function within a namespace:
+
+```kolibri
+spaceName.FunctionName();
+```
+
+If you use the `use` keyword to import a namespace, then you can call the function directly:
+
+```kolibri
+use:spaceName;
+FunctionName();
+```
+
+### Nested Namespaces
+
+Namespaces can be nested using the `.` notation. For example:
+
+```kolibri
+space name1.name2:
+Foo();
+```
+
+If you use `use:name1;`, you can call the nested function like this:
+
+```kolibri
+name2.Foo();
+```
+
+But you can't call it directly as `Foo()`.
+
+### Functions within Namespaces
+
+To define a function within a namespace without explicitly writing out the whole space block, you can use the following syntax:
+
+```kolibri
+spaceName.Boo(){}
+```
+
+For instance:
+
+```kolibri
+use:test;
+Hello();
+test.Hello() console.Write("Hello, World!");
+```
+
+This is equivalent to:
+
+```kolibri
+use:test;
+Hello();
+space test:
+Hello() console.Write("Hello, World!");
+```
