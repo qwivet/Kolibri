@@ -1,0 +1,2045 @@
+#start fun console.Write String input void
+#include<iostream
+#include String
+#include String_1
+void Write(const String &str)
+std::wcout<<std::wstring((&str)->value.begin(),(&str)->value.end());
+
+#start fun console.WriteLine String input void
+#include<iostream
+#include String
+#include String_1
+void WriteLine(const String &str)
+std::wcout << std::wstring((&str)->value.begin(),(&str)->value.end()) << std::endl;
+
+#start fun console.Read String
+#include<iostream
+#include String
+#include String_1
+String Read()
+std::wstring input;
+std::getline(std::wcin, input);
+return String_1(input);
+
+#start fun console.Read String prompt String
+#include<iostream
+#include String
+#include String_1
+#include console.Write
+String Read(const String &prompt)
+console::Write(prompt);
+std::wstring input;
+std::getline(std::wcin, input);
+return String_1(input);
+
+
+#start dat Int8
+#include Int8_1
+struct Int8 {char value;};
+
+#start fun Int8_1 byte value Int8
+#include Int8
+Int8 Int8_1(char a)
+return Int8{a};
+
+#start fun Int8_inc_unr_0 Int8 value Int8
+#include Int8
+#include Int8_1
+Int8 Int8_inc_unr_0(Int8 &value)
+value.value = value.value + 1;
+return Int8{static_cast<char>(value.value - 1)};
+
+#start fun Int8_inc_unl_0 Int8 value Int8
+#include Int8
+#include Int8_1
+Int8 Int8_inc_unl_0(Int8 &value)
+value.value = value.value + 1;
+return value;
+
+#start fun Int8_dec_unr_0 Int8 value Int8
+#include Int8
+#include Int8_1
+Int8 Int8_dec_unr_0(Int8 &value)
+value.value = value.value - 1;
+return Int8{static_cast<char>(value.value + 1)};
+
+#start fun Int8_dec_unl_0 Int8 value Int8
+#include Int8
+#include Int8_1
+Int8 Int8_dec_unl_0(Int8 &value)
+value.value = value.value - 1;
+return value;
+
+#start fun Int8_sub_unl_0 Int8 value Int8
+#include Int8
+#include Int8_1
+Int8 Int8_sub_unl_0(const Int8 &value)
+return Int8{static_cast<char>(-value.value)};
+
+#start fun Int8_add_unl_0 Int8 value Int8
+#include Int8
+#include Int8_1
+Int8 Int8_dec_unl_0(const Int8 &value)
+return value;
+
+#start fun Int8_mul_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_mul_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value * b.value)};
+
+#start fun Int8_div_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+#include Int8_sub_unl_0
+Int8 Int8_div_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value / b.value)};
+
+#start fun Int8_mod_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_mod_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value % b.value)};
+
+#start fun Int8_add_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_add_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value + b.value)};
+
+#start fun Int8_sub_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_sub_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value - b.value)};
+
+#start fun Int8_shl_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_shl_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value << b.value)};
+
+#start fun Int8_shr_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_shr_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value >> b.value)};
+
+#start fun Int8_nd_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_nd_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value & b.value)};
+
+#start fun Int8_xor_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_xor_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value ^ b.value)};
+
+#start fun Int8_or_bin_0 Int8 a Int8 b Int8
+#include Int8
+#include Int8_1
+Int8 Int8_or_bin_0(const Int8 &a, const Int8 &b)
+return Int8{static_cast<char>(a.value | b.value)};
+
+#start fun Int8_not_unl_0 Int8 value Int8
+#include Int8
+#include Int8_1
+Int8 Int8_not_unl_0(const Int8 &value)
+return Int8{static_cast<char>(~value.value)};
+
+#start fun Int8_lt_bin_0 Int8 a Int8 b Boolean
+#include Int8
+#include Int8_1
+#include Boolean
+Boolean Int8_lt_bin_0(const Int8 &a, const Int8 &b)
+return Boolean{a.value < b.value};
+
+#start fun Int8_gt_bin_0 Int8 a Int8 b Boolean
+#include Int8
+#include Int8_1
+#include Boolean
+Boolean Int8_gt_bin_0(const Int8 &a, const Int8 &b)
+return Boolean{a.value > b.value};
+
+#start fun Int8_le_bin_0 Int8 a Int8 b Boolean
+#include Int8
+#include Int8_1
+#include Boolean
+Boolean Int8_le_bin_0(const Int8 &a, const Int8 &b)
+return Boolean{a.value <= b.value};
+
+#start fun Int8_ge_bin_0 Int8 a Int8 b Boolean
+#include Int8
+#include Int8_1
+#include Boolean
+Boolean Int8_ge_bin_0(const Int8 &a, const Int8 &b)
+return Boolean{a.value >= b.value};
+
+#start fun Int8_eq_bin_0 Int8 a Int8 b Boolean
+#include Int8
+#include Int8_1
+#include Boolean
+Boolean Int8_eq_bin_0(const Int8 &a, const Int8 &b)
+return Boolean{a.value == b.value};
+
+#start fun Int8_ne_bin_0 Int8 a Int8 b Boolean
+#include Int8
+#include Int8_1
+#include Boolean
+Boolean Int8_ne_bin_0(const Int8 &a, const Int8 &b)
+return Boolean{a.value != b.value};
+
+#start fun Int8_and_bin_0 Int8 a Int8 b Boolean
+#include Int8
+#include Int8_1
+#include Boolean
+Boolean Int8_and_bin_0(const Int8 &a, const Int8 &b)
+return Boolean{a.value && b.value};
+
+#start fun Int8_orr_bin_0 Int8 a Int8 b Boolean
+#include Int8
+#include Int8_1
+#include Boolean
+Boolean Int8_or_log_0(const Int8 &a, const Int8 &b)
+return Boolean{a.value || b.value};
+
+#start fun Int8_to_Int16_7 Int8 value Int16
+#include Int16
+#include Int8
+Int16 Int8_to_Int16_7(const Int8 &input)
+return Int16{static_cast<short>(input.value)};
+
+#start fun Int8_to_Int32_7 Int8 value Int32
+#include Int32
+#include Int8
+Int32 Int8_to_Int32_7(const Int8 &input)
+return Int32{static_cast<int>(input.value)};
+
+#start fun Int8_to_Int64_7 Int8 value Int64
+#include Int64
+#include Int8
+Int64 Int8_to_Int64_7(const Int8 &input)
+return Int64{static_cast<long long>(input.value)};
+
+#start fun Int8_to_Int128_7 Int8 value Int128
+#include Int8
+#include Int128
+Int128 Int8_to_Int128_7(const Int8 &input)
+return Int128{static_cast<__int128>(input.value)};
+
+#start fun Int8_to_Boolean_7 Int8 value Boolean
+#include Int8
+#include Boolean
+Boolean Int8_to_Boolean_7(const Int8 &input)
+return Boolean{input.value != 0};
+
+#start fun Int8_to_Float32_7 Int8 value Float32
+#include Int8
+#include Float32
+Float32 Int8_to_Float32_7(const Int8 &input)
+return Float32{static_cast<float>(input.value)};
+
+#start fun Int8_to_Float64_7 Int8 value Float64
+#include Int8
+#include Float64
+Float64 Int8_to_Float64_7(const Int8 &input)
+return Float64{static_cast<double>(input.value)};
+
+#start fun Int8_to_Float128_7 Int8 value Float128
+#include Int8
+#include Float128
+Float128 Int8_to_Float128_7(const Int8 &input)
+return Float128{static_cast<__float128>(input.value)};
+
+#start fun Int8_to_String_7 Int8 value String
+#include Int8
+#include String
+String Int8_to_String_7(Int8 value)
+std::wstring wideStr = std::to_wstring(value.value);
+String result;
+for (auto &ch : wideStr) {result.value.push_back(ch);}
+return result;
+
+
+#start dat Int16
+#include Int16_1
+struct Int16 {short value;};
+
+#start fun Int16_1 short value Int8
+#include Int16
+Int16 Int16_1(short a)
+return Int16{a};
+
+#start fun Int16_inc_unr_0 Int16 value Int16
+#include Int16
+#include Int16_1
+Int16 Int16_inc_unr_0(Int16 &value)
+value.value = value.value + 1;
+return Int16{static_cast<short>(value.value - 1)};
+
+#start fun Int16_inc_unl_0 Int16 value Int16
+#include Int16
+#include Int16_1
+Int16 Int16_inc_unl_0(Int16 &value)
+value.value = value.value + 1;
+return value;
+
+#start fun Int16_dec_unr_0 Int16 value Int16
+#include Int16
+#include Int16_1
+Int16 Int16_dec_unr_0(Int16 &value)
+value.value = value.value - 1;
+return Int16{static_cast<short>(value.value + 1)};
+
+#start fun Int16_dec_unl_0 Int16 value Int16
+#include Int16
+#include Int16_1
+Int16 Int16_dec_unl_0(Int16 &value)
+value.value = value.value - 1;
+return value;
+
+#start fun Int16_sub_unl_0 Int16 value Int16
+#include Int16
+#include Int16_1
+Int16 Int16_sub_unl_0(const Int16 &value)
+return Int16{static_cast<short>(-value.value)};
+
+#start fun Int16_add_unl_0 Int16 value Int16
+#include Int16
+#include Int16_1
+Int16 Int16_dec_unl_0(const Int16 &value)
+return value;
+
+#start fun Int16_mul_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_mul_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value * b.value)};
+
+#start fun Int16_div_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+#include Int16_sub_unl_0
+Int16 Int16_div_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value / b.value)};
+
+#start fun Int16_mod_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_mod_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value % b.value)};
+
+#start fun Int16_add_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_add_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value + b.value)};
+
+#start fun Int16_sub_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_sub_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value - b.value)};
+
+#start fun Int16_shl_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_shl_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value << b.value)};
+
+#start fun Int16_shr_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_shr_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value >> b.value)};
+
+#start fun Int16_nd_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_nd_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value & b.value)};
+
+#start fun Int16_xor_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_xor_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value ^ b.value)};
+
+#start fun Int16_or_bin_0 Int16 a Int16 b Int16
+#include Int16
+#include Int16_1
+Int16 Int16_or_bin_0(const Int16 &a, const Int16 &b)
+return Int16{static_cast<short>(a.value | b.value)};
+
+#start fun Int16_not_unl_0 Int16 value Int16
+#include Int16
+#include Int16_1
+Int16 Int16_not_unl_0(const Int16 &value)
+return Int16{static_cast<short>(~value.value)};
+
+#start fun Int16_lt_bin_0 Int16 a Int16 b Boolean
+#include Int16
+#include Int16_1
+#include Boolean
+Boolean Int16_lt_bin_0(const Int16 &a, const Int16 &b)
+return Boolean{a.value < b.value};
+
+#start fun Int16_gt_bin_0 Int16 a Int16 b Boolean
+#include Int16
+#include Int16_1
+#include Boolean
+Boolean Int16_gt_bin_0(const Int16 &a, const Int16 &b)
+return Boolean{a.value > b.value};
+
+#start fun Int16_le_bin_0 Int16 a Int16 b Boolean
+#include Int16
+#include Int16_1
+#include Boolean
+Boolean Int16_le_bin_0(const Int16 &a, const Int16 &b)
+return Boolean{a.value <= b.value};
+
+#start fun Int16_ge_bin_0 Int16 a Int16 b Boolean
+#include Int16
+#include Int16_1
+#include Boolean
+Boolean Int16_ge_bin_0(const Int16 &a, const Int16 &b)
+return Boolean{a.value >= b.value};
+
+#start fun Int16_eq_bin_0 Int16 a Int16 b Boolean
+#include Int16
+#include Int16_1
+#include Boolean
+Boolean Int16_eq_bin_0(const Int16 &a, const Int16 &b)
+return Boolean{a.value == b.value};
+
+#start fun Int16_ne_bin_0 Int16 a Int16 b Boolean
+#include Int16
+#include Int16_1
+#include Boolean
+Boolean Int16_ne_bin_0(const Int16 &a, const Int16 &b)
+return Boolean{a.value != b.value};
+
+#start fun Int16_and_bin_0 Int16 a Int16 b Boolean
+#include Int16
+#include Int16_1
+#include Boolean
+Boolean Int16_and_bin_0(const Int16 &a, const Int16 &b)
+return Boolean{a.value && b.value};
+
+#start fun Int16_orr_bin_0 Int16 a Int16 b Boolean
+#include Int16
+#include Int16_1
+#include Boolean
+Boolean Int16_or_log_0(const Int16 &a, const Int16 &b)
+return Boolean{a.value || b.value};
+
+#start fun Int16_to_Int8_7 Int16 value Int8
+#include Int16
+#include Int8
+Int8 Int16_to_Int8_7(const Int16 &input)
+return Int8{static_cast<char>(input.value)};
+
+#start fun Int16_to_Int32_7 Int16 value Int32
+#include Int32
+#include Int16
+Int32 Int16_to_Int32_7(const Int16 &input)
+return Int32{static_cast<int>(input.value)};
+
+#start fun Int16_to_Int64_7 Int16 value Int64
+#include Int64
+#include Int16
+Int64 Int16_to_Int64_7(const Int16 &input)
+return Int64{static_cast<long long>(input.value)};
+
+#start fun Int16_to_Int128_7 Int16 value Int128
+#include Int16
+#include Int128
+Int128 Int16_to_Int128_7(const Int16 &input)
+return Int128{static_cast<__int128>(input.value)};
+
+#start fun Int16_to_Boolean_7 Int16 value Boolean
+#include Int16
+#include Boolean
+Boolean Int16_to_Boolean_7(const Int16 &input)
+return Boolean{input.value != 0};
+
+#start fun Int16_to_Float32_7 Int16 value Float32
+#include Int16
+#include Float32
+Float32 Int16_to_Float32_7(const Int16 &input)
+return Float32{static_cast<float>(input.value)};
+
+#start fun Int16_to_Float64_7 Int16 value Float64
+#include Int16
+#include Float64
+Float64 Int16_to_Float64_7(const Int16 &input)
+return Float64{static_cast<double>(input.value)};
+
+#start fun Int16_to_Float128_7 Int16 value Float128
+#include Int16
+#include Float128
+Float128 Int16_to_Float128_7(const Int16 &input)
+return Float128{static_cast<__float128>(input.value)};
+
+#start fun Int16_to_String_7 Int16 value String
+#include Int16
+#include String
+String Int16_to_String_7(Int16 value)
+std::wstring wideStr = std::to_wstring(value.value);
+String result;
+for (auto &ch : wideStr) {result.value.push_back(ch);}
+return result;
+
+
+#start dat Int32
+#include Int32_1
+struct Int32 {int value;};
+
+#start fun Int32_1 int value Int32
+#include Int32
+Int32 Int32_1(int a)
+return Int32 {a};
+
+#start fun Int32_inc_unr_0 Int32 value Int32
+#include Int32
+#include Int32_1
+Int32 Int32_inc_unr_0(Int32 &value)
+value.value = value.value + 1;
+return Int32{value.value - 1};
+
+#start fun Int32_inc_unl_0 Int32 value Int32
+#include Int32
+#include Int32_1
+Int32 Int32_inc_unl_0(Int32 &value)
+value.value = value.value + 1;
+return value;
+
+#start fun Int32_dec_unr_0 Int32 value Int32
+#include Int32
+#include Int32_1
+Int32 Int32_dec_unr_0(Int32 &value)
+value.value = value.value - 1;
+return Int32{value.value + 1};
+
+#start fun Int32_dec_unl_0 Int32 value Int32
+#include Int32
+#include Int32_1
+Int32 Int32_dec_unl_0(Int32 &value)
+value.value = value.value - 1;
+return value;
+
+#start fun Int32_sub_unl_0 Int32 value Int32
+#include Int32
+#include Int32_1
+Int32 Int32_sub_unl_0(const Int32 &value)
+return Int32{-value.value};
+
+#start fun Int32_add_unl_0 Int32 value Int32
+#include Int32
+#include Int32_1
+Int32 Int32_dec_unl_0(const Int32 &value)
+return value;
+
+#start fun Int32_mul_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_mul_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value * b.value};
+
+#start fun Int32_div_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+#include Int32_sub_unl_0
+Int32 Int32_div_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value / b.value};
+
+#start fun Int32_mod_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_mod_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value % b.value};
+
+#start fun Int32_add_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_add_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value + b.value};
+
+#start fun Int32_sub_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_sub_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value - b.value};
+
+#start fun Int32_shl_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_shl_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value << b.value};
+
+#start fun Int32_shr_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_shr_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value >> b.value};
+
+#start fun Int32_lt_bin_0 Int32 a Int32 b Boolean
+#include Int32
+#include Int32_1
+#include Boolean
+Boolean Int32_lt_bin_0(const Int32 &a, const Int32 &b)
+return Boolean{a.value < b.value};
+
+#start fun Int32_gt_bin_0 Int32 a Int32 b Boolean
+#include Int32
+#include Int32_1
+#include Boolean
+Boolean Int32_gt_bin_0(const Int32 &a, const Int32 &b)
+return Boolean{a.value > b.value};
+
+#start fun Int32_le_bin_0 Int32 a Int32 b Boolean
+#include Int32
+#include Int32_1
+#include Boolean
+Boolean Int32_le_bin_0(const Int32 &a, const Int32 &b)
+return Boolean{a.value <= b.value};
+
+#start fun Int32_ge_bin_0 Int32 a Int32 b Boolean
+#include Int32
+#include Int32_1
+#include Boolean
+Boolean Int32_ge_bin_0(const Int32 &a, const Int32 &b)
+return Boolean{a.value >= b.value};
+
+#start fun Int32_eq_bin_0 Int32 a Int32 b Boolean
+#include Int32
+#include Int32_1
+#include Boolean
+Boolean Int32_eq_bin_0(const Int32 &a, const Int32 &b)
+return Boolean{a.value == b.value};
+
+#start fun Int32_ne_bin_0 Int32 a Int32 b Boolean
+#include Int32
+#include Int32_1
+#include Boolean
+Boolean Int32_ne_bin_0(const Int32 &a, const Int32 &b)
+return Boolean{a.value != b.value};
+
+#start fun Int32_nd_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_nd_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value & b.value};
+
+#start fun Int32_xor_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_xor_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value ^ b.value};
+
+#start fun Int32_or_bin_0 Int32 a Int32 b Int32
+#include Int32
+#include Int32_1
+Int32 Int32_or_bin_0(const Int32 &a, const Int32 &b)
+return Int32{a.value | b.value};
+
+#start fun Int32_and_bin_0 Int32 a Int32 b Boolean
+#include Int32
+#include Int32_1
+#include Boolean
+Boolean Int32_and_bin_0(const Int32 &a, const Int32 &b)
+return Boolean{a.value && b.value};
+
+#start fun Int32_orr_bin_0 Int32 a Int32 b Boolean
+#include Int32
+#include Int32_1
+#include Boolean
+Boolean Int32_or_log_0(const Int32 &a, const Int32 &b)
+return Boolean{a.value || b.value};
+
+#start fun Int32_not_unl_0 Int32 value Int32
+#include Int32
+#include Int32_1
+Int32 Int32_not_unl_0(const Int32 &value)
+return Int32{~value.value};
+
+#start fun Int32_to_Int8_7 Int32 value Int8
+#include Int32
+#include Int8
+Int8 Int32_to_Int8_7(const Int32 &input)
+return Int8{static_cast<char>(input.value)};
+
+#start fun Int32_to_Int16_7 Int32 value Int16
+#include Int32
+#include Int16
+Int16 Int32_to_Int16_7(const Int32 &input)
+return Int16{static_cast<short>(input.value)};
+
+#start fun Int32_to_Int64_7 Int32 value Int64
+#include Int64
+#include Int32
+Int64 Int32_to_Int64_7(const Int32 &input)
+return Int64{static_cast<long long>(input.value)};
+
+#start fun Int32_to_Int128_7 Int32 value Int128
+#include Int32
+#include Int128
+Int128 Int32_to_Int128_7(const Int32 &input)
+return Int128{static_cast<__int128>(input.value)};
+
+#start fun Int32_to_Boolean_7 Int32 value Boolean
+#include Int32
+#include Boolean
+Boolean Int32_to_Boolean_7(const Int32 &input)
+return Boolean{input.value != 0};
+
+#start fun Int32_to_Float32_7 Int32 value Float32
+#include Int32
+#include Float32
+Float32 Int32_to_Float32_7(const Int32 &input)
+return Float32{static_cast<float>(input.value)};
+
+#start fun Int32_to_Float64_7 Int32 value Float64
+#include Int32
+#include Float64
+Float64 Int32_to_Float64_7(const Int32 &input)
+return Float64{static_cast<double>(input.value)};
+
+#start fun Int32_to_Float128_7 Int32 value Float128
+#include Int32
+#include Float128
+Float128 Int32_to_Float128_7(const Int32 &input)
+return Float128{static_cast<__float128>(input.value)};
+
+#start fun Int32_to_String_7 Int32 value String
+#include Int32
+#include String
+String Int32_to_String_7(Int32 value)
+std::wstring wideStr = std::to_wstring(value.value);
+String result;
+for (auto &ch : wideStr) {result.value.push_back(ch);}
+return result;
+
+
+#start dat Int64
+#include Int64_1
+struct Int64 {long long value;};
+
+#start fun Int64_1 llong value Int64
+#include Int64
+Int64 Int64_1(long long a)
+return Int64 {a};
+
+#start fun Int64_inc_unr_0 Int64 value Int64
+#include Int64
+#include Int64_1
+Int64 Int64_inc_unr_0(Int64 &value)
+value.value = value.value + 1;
+return Int64{value.value - 1};
+
+#start fun Int64_inc_unl_0 Int64 value Int64
+#include Int64
+#include Int64_1
+Int64 Int64_inc_unl_0(Int64 &value)
+value.value = value.value + 1;
+return value;
+
+#start fun Int64_dec_unr_0 Int64 value Int64
+#include Int64
+#include Int64_1
+Int64 Int64_dec_unr_0(Int64 &value)
+value.value = value.value - 1;
+return Int64{value.value + 1};
+
+#start fun Int64_dec_unl_0 Int64 value Int64
+#include Int64
+#include Int64_1
+Int64 Int64_dec_unl_0(Int64 &value)
+value.value = value.value - 1;
+return value;
+
+#start fun Int64_sub_unl_0 Int64 value Int64
+#include Int64
+#include Int64_1
+Int64 Int64_sub_unl_0(const Int64 &value)
+return Int64{-value.value};
+
+#start fun Int64_add_unl_0 Int64 value Int64
+#include Int64
+#include Int64_1
+Int64 Int64_dec_unl_0(const Int64 &value)
+return value;
+
+#start fun Int64_mul_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_mul_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value * b.value};
+
+#start fun Int64_div_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+#include Int64_sub_unl_0
+Int64 Int64_div_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value / b.value};
+
+#start fun Int64_mod_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_mod_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value % b.value};
+
+#start fun Int64_add_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_add_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value + b.value};
+
+#start fun Int64_sub_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_sub_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value - b.value};
+
+#start fun Int64_shl_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_shl_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value << b.value};
+
+#start fun Int64_shr_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_shr_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value >> b.value};
+
+#start fun Int64_lt_bin_0 Int64 a Int64 b Boolean
+#include Int64
+#include Int64_1
+#include Boolean
+Boolean Int64_lt_bin_0(const Int64 &a, const Int64 &b)
+return Boolean{a.value < b.value};
+
+#start fun Int64_gt_bin_0 Int64 a Int64 b Boolean
+#include Int64
+#include Int64_1
+#include Boolean
+Boolean Int64_gt_bin_0(const Int64 &a, const Int64 &b)
+return Boolean{a.value > b.value};
+
+#start fun Int64_le_bin_0 Int64 a Int64 b Boolean
+#include Int64
+#include Int64_1
+#include Boolean
+Boolean Int64_le_bin_0(const Int64 &a, const Int64 &b)
+return Boolean{a.value <= b.value};
+
+#start fun Int64_ge_bin_0 Int64 a Int64 b Boolean
+#include Int64
+#include Int64_1
+#include Boolean
+Boolean Int64_ge_bin_0(const Int64 &a, const Int64 &b)
+return Boolean{a.value >= b.value};
+
+#start fun Int64_eq_bin_0 Int64 a Int64 b Boolean
+#include Int64
+#include Int64_1
+#include Boolean
+Boolean Int64_eq_bin_0(const Int64 &a, const Int64 &b)
+return Boolean{a.value == b.value};
+
+#start fun Int64_ne_bin_0 Int64 a Int64 b Boolean
+#include Int64
+#include Int64_1
+#include Boolean
+Boolean Int64_ne_bin_0(const Int64 &a, const Int64 &b)
+return Boolean{a.value != b.value};
+
+#start fun Int64_nd_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_nd_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value & b.value};
+
+#start fun Int64_xor_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_xor_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value ^ b.value};
+
+#start fun Int64_or_bin_0 Int64 a Int64 b Int64
+#include Int64
+#include Int64_1
+Int64 Int64_or_bin_0(const Int64 &a, const Int64 &b)
+return Int64{a.value | b.value};
+
+#start fun Int64_and_bin_0 Int64 a Int64 b Boolean
+#include Int64
+#include Int64_1
+#include Boolean
+Boolean Int64_and_bin_0(const Int64 &a, const Int64 &b)
+return Boolean{a.value && b.value};
+
+#start fun Int64_orr_bin_0 Int64 a Int64 b Boolean
+#include Int64
+#include Int64_1
+#include Boolean
+Boolean Int64_or_log_0(const Int64 &a, const Int64 &b)
+return Boolean{a.value || b.value};
+
+#start fun Int64_not_unl_0 Int64 value Int64
+#include Int64
+#include Int64_1
+Int64 Int64_not_unl_0(const Int64 &value)
+return Int64{~value.value};
+
+#start fun Int64_to_Int8_7 Int64 value Int8
+#include Int64
+#include Int8
+Int8 Int64_to_Int8_7(const Int64 &input)
+return Int8{static_cast<char>(input.value)};
+
+#start fun Int64_to_Int16_7 Int64 value Int16
+#include Int64
+#include Int16
+Int16 Int64_to_Int16_7(const Int64 &input)
+return Int16{static_cast<short>(input.value)};
+
+#start fun Int64_to_Int32_7 Int64 value Int32
+#include Int64
+#include Int32
+Int32 Int64_to_Int32_7(const Int64 &input)
+return Int32{static_cast<int>(input.value)};
+
+#start fun Int64_to_Int128_7 Int64 value Int128
+#include Int64
+#include Int128
+Int128 Int64_to_Int128_7(const Int64 &input)
+return Int128{static_cast<__int128>(input.value)};
+
+#start fun Int64_to_Boolean_7 Int64 value Boolean
+#include Int64
+#include Boolean
+Boolean Int64_to_Boolean_7(const Int64 &input)
+return Boolean{input.value != 0};
+
+#start fun Int64_to_Float32_7 Int64 value Float32
+#include Int64
+#include Float32
+Float32 Int64_to_Float32_7(const Int64 &input)
+return Float32{static_cast<float>(input.value)};
+
+#start fun Int64_to_Float64_7 Int64 value Float64
+#include Int64
+#include Float64
+Float64 Int64_to_Float64_7(const Int64 &input)
+return Float64{static_cast<double>(input.value)};
+
+#start fun Int64_to_Float128_7 Int64 value Float128
+#include Int64
+#include Float128
+Float128 Int64_to_Float128_7(const Int64 &input)
+return Float128{static_cast<__float128>(input.value)};
+
+#start fun Int64_to_String_7 Int64 value String
+#include Int64
+#include String
+String Int64_to_String_7(Int64 value)
+std::wstring wideStr = std::to_wstring(value.value);
+String result;
+for (auto &ch : wideStr) {result.value.push_back(ch);}
+return result;
+
+
+#start dat Int128
+#include Int128_1
+struct Int128 {__int128 value;};
+
+#start fun Int128_1 extra value Int128
+#include Int128
+Int128 Int128_1(long long a, long long b)
+__int128 high_part = static_cast<__int128>(a);
+for (auto i = 0; i < 4; i++) high_part *= 65536;
+__int128 low_part = static_cast<__int128>(b);
+return Int128 { high_part + low_part };
+
+#start fun Int128_inc_unr_0 Int128 value Int128
+#include Int128
+#include Int128_1
+Int128 Int128_inc_unr_0(Int128 &value)
+value.value = value.value + 1;
+return Int128{value.value - 1};
+
+#start fun Int128_inc_unl_0 Int128 value Int128
+#include Int128
+#include Int128_1
+Int128 Int128_inc_unl_0(Int128 &value)
+value.value = value.value + 1;
+return value;
+
+#start fun Int128_dec_unr_0 Int128 value Int128
+#include Int128
+#include Int128_1
+Int128 Int128_dec_unr_0(Int128 &value)
+value.value = value.value - 1;
+return Int128{value.value + 1};
+
+#start fun Int128_dec_unl_0 Int128 value Int128
+#include Int128
+#include Int128_1
+Int128 Int128_dec_unl_0(Int128 &value)
+value.value = value.value - 1;
+return value;
+
+#start fun Int128_sub_unl_0 Int128 value Int128
+#include Int128
+#include Int128_1
+Int128 Int128_sub_unl_0(const Int128 &value)
+return Int128{-value.value};
+
+#start fun Int128_add_unl_0 Int128 value Int128
+#include Int128
+#include Int128_1
+Int128 Int128_dec_unl_0(const Int128 &value)
+return value;
+
+#start fun Int128_mul_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_mul_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value * b.value};
+
+#start fun Int128_div_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+#include Int128_sub_unl_0
+Int128 Int128_div_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value / b.value};
+
+#start fun Int128_mod_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_mod_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value % b.value};
+
+#start fun Int128_add_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_add_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value + b.value};
+
+#start fun Int128_sub_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_sub_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value - b.value};
+
+#start fun Int128_shl_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_shl_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value << b.value};
+
+#start fun Int128_shr_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_shr_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value >> b.value};
+
+#start fun Int128_lt_bin_0 Int128 a Int128 b Boolean
+#include Int128
+#include Int128_1
+#include Boolean
+Boolean Int128_lt_bin_0(const Int128 &a, const Int128 &b)
+return Boolean{a.value < b.value};
+
+#start fun Int128_gt_bin_0 Int128 a Int128 b Boolean
+#include Int128
+#include Int128_1
+#include Boolean
+Boolean Int128_gt_bin_0(const Int128 &a, const Int128 &b)
+return Boolean{a.value > b.value};
+
+#start fun Int128_le_bin_0 Int128 a Int128 b Boolean
+#include Int128
+#include Int128_1
+#include Boolean
+Boolean Int128_le_bin_0(const Int128 &a, const Int128 &b)
+return Boolean{a.value <= b.value};
+
+#start fun Int128_ge_bin_0 Int128 a Int128 b Boolean
+#include Int128
+#include Int128_1
+#include Boolean
+Boolean Int128_ge_bin_0(const Int128 &a, const Int128 &b)
+return Boolean{a.value >= b.value};
+
+#start fun Int128_eq_bin_0 Int128 a Int128 b Boolean
+#include Int128
+#include Int128_1
+#include Boolean
+Boolean Int128_eq_bin_0(const Int128 &a, const Int128 &b)
+return Boolean{a.value == b.value};
+
+#start fun Int128_ne_bin_0 Int128 a Int128 b Boolean
+#include Int128
+#include Int128_1
+#include Boolean
+Boolean Int128_ne_bin_0(const Int128 &a, const Int128 &b)
+return Boolean{a.value != b.value};
+
+#start fun Int128_nd_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_nd_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value & b.value};
+
+#start fun Int128_xor_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_xor_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value ^ b.value};
+
+#start fun Int128_or_bin_0 Int128 a Int128 b Int128
+#include Int128
+#include Int128_1
+Int128 Int128_or_bin_0(const Int128 &a, const Int128 &b)
+return Int128{a.value | b.value};
+
+#start fun Int128_and_bin_0 Int128 a Int128 b Boolean
+#include Int128
+#include Int128_1
+#include Boolean
+Boolean Int128_and_bin_0(const Int128 &a, const Int128 &b)
+return Boolean{a.value && b.value};
+
+#start fun Int128_orr_bin_0 Int128 a Int128 b Boolean
+#include Int128
+#include Int128_1
+#include Boolean
+Boolean Int128_or_log_0(const Int128 &a, const Int128 &b)
+return Boolean{a.value || b.value};
+
+#start fun Int128_not_unl_0 Int128 value Int128
+#include Int128
+#include Int128_1
+Int128 Int128_not_unl_0(const Int128 &value)
+return Int128{~value.value};
+
+#start fun Int128_to_Int8_7 Int128 value Int8
+#include Int128
+#include Int8
+Int8 Int128_to_Int8_7(const Int128 &input)
+return Int8{static_cast<char>(input.value)};
+
+#start fun Int128_to_Int16_7 Int128 value Int16
+#include Int128
+#include Int16
+Int16 Int128_to_Int16_7(const Int128 &input)
+return Int16{static_cast<short>(input.value)};
+
+#start fun Int128_to_Int32_7 Int128 value Int32
+#include Int128
+#include Int32
+Int32 Int128_to_Int32_7(const Int128 &input)
+return Int32{static_cast<int>(input.value)};
+
+#start fun Int128_to_Int64_7 Int128 value Int64
+#include Int128
+#include Int64
+Int64 Int128_to_Int64_7(const Int128 &input)
+return Int64{static_cast<long long>(input.value)};
+
+#start fun Int128_to_Boolean_7 Int128 value Boolean
+#include Int128
+#include Boolean
+Boolean Int128_to_Boolean_7(const Int128 &input)
+return Boolean{input.value != 0};
+
+#start fun Int128_to_Float32_7 Int128 value Float32
+#include Int128
+#include Float32
+Float32 Int128_to_Float32_7(const Int128 &input)
+return Float32{static_cast<float>(input.value)};
+
+#start fun Int128_to_Float64_7 Int128 value Float64
+#include Int128
+#include Float64
+Float64 Int128_to_Float64_7(const Int128 &input)
+return Float64{static_cast<double>(input.value)};
+
+#start fun Int128_to_Float128_7 Int128 value Float128
+#include Int128
+#include Float128
+Float128 Int128_to_Float128_7(const Int128 &input)
+return Float128{static_cast<__float128>(input.value)};
+
+#start fun Int128_to_String_7 Int128 value String
+#include Int128
+#include String
+#include<algorithm
+String Int128_to_String_7(const Int128 &input)
+bool negative = input.value < 0;
+__int128 number = negative ? -input.value : input.value;
+std::vector<wchar_t> result;
+if (number == 0) result.push_back('0');
+else while (number != 0) {
+result.push_back((number % 10) + '0');
+number /= 10;}
+if (negative) result.push_back('-');
+std::reverse(result.begin(), result.end());
+return { result };
+
+
+#start dat Float32
+#include Float32_1
+struct Float32 {float value;};
+
+#start fun Float32_1 float value Float32
+#include Float32
+Float32 Float32_1(float a)
+return Float32{a};
+
+#start fun Float32_inc_unr_0 Float32 value Float32
+#include Float32
+#include Float32_1
+Float32 Float32_inc_unr_0(Float32 &value)
+value.value = value.value + 1;
+return Float32{value.value - 1};
+
+#start fun Float32_inc_unl_0 Float32 value Float32
+#include Float32
+#include Float32_1
+Float32 Float32_inc_unl_0(Float32 &value)
+value.value = value.value + 1;
+return value;
+
+#start fun Float32_dec_unr_0 Float32 value Float32
+#include Float32
+#include Float32_1
+Float32 Float32_dec_unr_0(Float32 &value)
+value.value = value.value - 1;
+return Float32{value.value + 1};
+
+#start fun Float32_dec_unl_0 Float32 value Float32
+#include Float32
+#include Float32_1
+Float32 Float32_dec_unl_0(Float32 &value)
+value.value = value.value - 1;
+return value;
+
+#start fun Float32_sub_unl_0 Float32 value Float32
+#include Float32
+#include Float32_1
+Float32 Float32_sub_unl_0(const Float32 &value)
+return Float32{-value.value};
+
+#start fun Float32_add_unl_0 Float32 value Float32
+#include Float32
+#include Float32_1
+Float32 Float32_dec_unl_0(const Float32 &value)
+return value;
+
+#start fun Float32_mul_bin_0 Float32 a Float32 b Float32
+#include Float32
+#include Float32_1
+Float32 Float32_mul_bin_0(const Float32 &a, const Float32 &b)
+return Float32{a.value * b.value};
+
+#start fun Float32_div_bin_0 Float32 a Float32 b Float32
+#include Float32
+#include Float32_1
+#include Float32_sub_unl_0
+Float32 Float32_div_bin_0(const Float32 &a, const Float32 &b)
+return Float32{a.value / b.value};
+
+#start fun Float32_mod_bin_0 Float32 a Float32 b Float32
+#include Float32
+#include Float32_1
+#include<cmath
+Float32 Float32_mod_bin_0(const Float32 &a, const Float32 &b)
+return Float32{static_cast<float>(fmod(a.value, b.value))};
+
+#start fun Float32_add_bin_0 Float32 a Float32 b Float32
+#include Float32
+#include Float32_1
+Float32 Float32_add_bin_0(const Float32 &a, const Float32 &b)
+return Float32{a.value + b.value};
+
+#start fun Float32_sub_bin_0 Float32 a Float32 b Float32
+#include Float32
+#include Float32_1
+Float32 Float32_sub_bin_0(const Float32 &a, const Float32 &b)
+return Float32{a.value - b.value};
+
+#start fun Float32_lt_bin_0 Float32 a Float32 b Boolean
+#include Float32
+#include Float32_1
+#include Boolean
+Boolean Float32_lt_bin_0(const Float32 &a, const Float32 &b)
+return Boolean{a.value < b.value};
+
+#start fun Float32_gt_bin_0 Float32 a Float32 b Boolean
+#include Float32
+#include Float32_1
+#include Boolean
+Boolean Float32_gt_bin_0(const Float32 &a, const Float32 &b)
+return Boolean{a.value > b.value};
+
+#start fun Float32_le_bin_0 Float32 a Float32 b Boolean
+#include Float32
+#include Float32_1
+#include Boolean
+Boolean Float32_le_bin_0(const Float32 &a, const Float32 &b)
+return Boolean{a.value <= b.value};
+
+#start fun Float32_ge_bin_0 Float32 a Float32 b Boolean
+#include Float32
+#include Float32_1
+#include Boolean
+Boolean Float32_ge_bin_0(const Float32 &a, const Float32 &b)
+return Boolean{a.value >= b.value};
+
+#start fun Float32_eq_bin_0 Float32 a Float32 b Boolean
+#include Float32
+#include Float32_1
+#include Boolean
+Boolean Float32_eq_bin_0(const Float32 &a, const Float32 &b)
+return Boolean{a.value == b.value};
+
+#start fun Float32_ne_bin_0 Float32 a Float32 b Boolean
+#include Float32
+#include Float32_1
+#include Boolean
+Boolean Float32_ne_bin_0(const Float32 &a, const Float32 &b)
+return Boolean{a.value != b.value};
+
+#start fun Float32_and_bin_0 Float32 a Float32 b Boolean
+#include Float32
+#include Float32_1
+#include Boolean
+Boolean Float32_and_bin_0(const Float32 &a, const Float32 &b)
+return Boolean{a.value && b.value};
+
+#start fun Float32_orr_bin_0 Float32 a Float32 b Boolean
+#include Float32
+#include Float32_1
+#include Boolean
+Boolean Float32_or_log_0(const Float32 &a, const Float32 &b)
+return Boolean{a.value || b.value};
+
+#start fun Float32_to_Int8_7 Float32 value Int8
+#include Int8
+#include Float32
+Int8 Float32_to_Int8_7(const Float32 &input)
+return Int8{static_cast<char>(input.value)};
+
+#start fun Float32_to_Int16_7 Float32 value Int16
+#include Int16
+#include Float32
+Int16 Float32_to_Int16_7(const Float32 &input)
+return Int16{static_cast<short>(input.value)};
+
+#start fun Float32_to_Int32_7 Float32 value Int32
+#include Int32
+#include Float32
+Int32 Float32_to_Int32_7(const Float32 &input)
+return Int32{static_cast<int>(input.value)};
+
+#start fun Float32_to_Int64_7 Float32 value Int64
+#include Int64
+#include Float32
+Int64 Float32_to_Int64_7(const Float32 &input)
+return Int64{static_cast<long long>(input.value)};
+
+#start fun Float32_to_Int128_7 Float32 value Int128
+#include Float32
+#include Int128
+Int128 Float32_to_Int128_7(const Float32 &input)
+return Int128{static_cast<__int128>(input.value)};
+
+#start fun Float32_to_Boolean_7 Float32 value Boolean
+#include Float32
+#include Boolean
+Boolean Float32_to_Boolean_7(const Float32 &input)
+return Boolean{input.value != 0};
+
+#start fun Float32_to_Float64_7 Float32 value Float64
+#include Float64
+#include Float32
+Float64 Float32_to_Float64_7(const Float32 &input)
+return Float64{static_cast<double>(input.value)};
+
+#start fun Float32_to_Float128_7 Float32 value Float128
+#include Float128
+#include Float32
+Float128 Float32_to_Float128_7(const Float32 &input)
+return Float128{static_cast<__float128>(input.value)};
+
+#start fun Float32_to_String_7 Float32 value String
+#include Float32
+#include String
+#include<sstream
+String Float32_to_String_7(const Float32& f)
+std::wstringstream wsstream;
+wsstream << f.value;
+std::wstring wideString = wsstream.str();
+return {std::vector<wchar_t>(wideString.begin(), wideString.end())};
+
+
+#start dat Float64
+#include Float64_1
+struct Float64 {double value;};
+
+#start fun Float64_1 float value Float64
+#include Float64
+Float64 Float64_1(double a)
+return Float64{a};
+
+#start fun Float64_inc_unr_0 Float64 value Float64
+#include Float64
+#include Float64_1
+Float64 Float64_inc_unr_0(Float64 &value)
+value.value = value.value + 1;
+return Float64{value.value - 1};
+
+#start fun Float64_inc_unl_0 Float64 value Float64
+#include Float64
+#include Float64_1
+Float64 Float64_inc_unl_0(Float64 &value)
+value.value = value.value + 1;
+return value;
+
+#start fun Float64_dec_unr_0 Float64 value Float64
+#include Float64
+#include Float64_1
+Float64 Float64_dec_unr_0(Float64 &value)
+value.value = value.value - 1;
+return Float64{value.value + 1};
+
+#start fun Float64_dec_unl_0 Float64 value Float64
+#include Float64
+#include Float64_1
+Float64 Float64_dec_unl_0(Float64 &value)
+value.value = value.value - 1;
+return value;
+
+#start fun Float64_sub_unl_0 Float64 value Float64
+#include Float64
+#include Float64_1
+Float64 Float64_sub_unl_0(const Float64 &value)
+return Float64{-value.value};
+
+#start fun Float64_add_unl_0 Float64 value Float64
+#include Float64
+#include Float64_1
+Float64 Float64_dec_unl_0(const Float64 &value)
+return value;
+
+#start fun Float64_mul_bin_0 Float64 a Float64 b Float64
+#include Float64
+#include Float64_1
+Float64 Float64_mul_bin_0(const Float64 &a, const Float64 &b)
+return Float64{a.value * b.value};
+
+#start fun Float64_div_bin_0 Float64 a Float64 b Float64
+#include Float64
+#include Float64_1
+#include Float64_sub_unl_0
+Float64 Float64_div_bin_0(const Float64 &a, const Float64 &b)
+return Float64{a.value / b.value};
+
+#start fun Float64_mod_bin_0 Float64 a Float64 b Float64
+#include Float64
+#include Float64_1
+#include<cmath
+Float64 Float64_mod_bin_0(const Float64 &a, const Float64 &b)
+return Float64{fmod(a.value, b.value)};
+
+#start fun Float64_add_bin_0 Float64 a Float64 b Float64
+#include Float64
+#include Float64_1
+Float64 Float64_add_bin_0(const Float64 &a, const Float64 &b)
+return Float64{a.value + b.value};
+
+#start fun Float64_sub_bin_0 Float64 a Float64 b Float64
+#include Float64
+#include Float64_1
+Float64 Float64_sub_bin_0(const Float64 &a, const Float64 &b)
+return Float64{a.value - b.value};
+
+#start fun Float64_lt_bin_0 Float64 a Float64 b Boolean
+#include Float64
+#include Float64_1
+#include Boolean
+Boolean Float64_lt_bin_0(const Float64 &a, const Float64 &b)
+return Boolean{a.value < b.value};
+
+#start fun Float64_gt_bin_0 Float64 a Float64 b Boolean
+#include Float64
+#include Float64_1
+#include Boolean
+Boolean Float64_gt_bin_0(const Float64 &a, const Float64 &b)
+return Boolean{a.value > b.value};
+
+#start fun Float64_le_bin_0 Float64 a Float64 b Boolean
+#include Float64
+#include Float64_1
+#include Boolean
+Boolean Float64_le_bin_0(const Float64 &a, const Float64 &b)
+return Boolean{a.value <= b.value};
+
+#start fun Float64_ge_bin_0 Float64 a Float64 b Boolean
+#include Float64
+#include Float64_1
+#include Boolean
+Boolean Float64_ge_bin_0(const Float64 &a, const Float64 &b)
+return Boolean{a.value >= b.value};
+
+#start fun Float64_eq_bin_0 Float64 a Float64 b Boolean
+#include Float64
+#include Float64_1
+#include Boolean
+Boolean Float64_eq_bin_0(const Float64 &a, const Float64 &b)
+return Boolean{a.value == b.value};
+
+#start fun Float64_ne_bin_0 Float64 a Float64 b Boolean
+#include Float64
+#include Float64_1
+#include Boolean
+Boolean Float64_ne_bin_0(const Float64 &a, const Float64 &b)
+return Boolean{a.value != b.value};
+
+#start fun Float64_and_bin_0 Float64 a Float64 b Boolean
+#include Float64
+#include Float64_1
+#include Boolean
+Boolean Float64_and_bin_0(const Float64 &a, const Float64 &b)
+return Boolean{a.value && b.value};
+
+#start fun Float64_orr_bin_0 Float64 a Float64 b Boolean
+#include Float64
+#include Float64_1
+#include Boolean
+Boolean Float64_or_log_0(const Float64 &a, const Float64 &b)
+return Boolean{a.value || b.value};
+
+#start fun Float64_to_Int8_7 Float64 value Int8
+#include Int8
+#include Float64
+Int8 Float64_to_Int8_7(const Float64 &input)
+return Int8{static_cast<char>(input.value)};
+
+#start fun Float64_to_Int16_7 Float64 value Int16
+#include Int16
+#include Float64
+Int16 Float64_to_Int16_7(const Float64 &input)
+return Int16{static_cast<short>(input.value)};
+
+#start fun Float64_to_Int32_7 Float64 value Int32
+#include Int32
+#include Float64
+Int32 Float64_to_Int32_7(const Float64 &input)
+return Int32{static_cast<int>(input.value)};
+
+#start fun Float64_to_Int64_7 Float64 value Int64
+#include Int64
+#include Float64
+Int64 Float64_to_Int64_7(const Float64 &input)
+return Int64{static_cast<long long>(input.value)};
+
+#start fun Float64_to_Int128_7 Float64 value Int128
+#include Float64
+#include Int128
+Int128 Float64_to_Int128_7(const Float64 &input)
+return Int128{static_cast<__int128>(input.value)};
+
+#start fun Float64_to_Boolean_7 Float64 value Boolean
+#include Float64
+#include Boolean
+Boolean Float64_to_Boolean_7(const Float64 &input)
+return Boolean{input.value != 0};
+
+#start fun Float64_to_Float32_7 Float64 value Float32
+#include Float64
+#include Float32
+Float32 Float64_to_Float32_7(const Float64 &input)
+return Float32{static_cast<float>(input.value)};
+
+#start fun Float64_to_Float128_7 Float64 value Float128
+#include Float128
+#include Float64
+Float128 Float64_to_Float128_7(const Float64 &input)
+return Float128{static_cast<__float128>(input.value)};
+
+#start fun Float64_to_String_7 Float64 value String
+#include Float64
+#include String
+#include<sstream
+String Float64_to_String_7(const Float64& f)
+std::wstringstream wsstream;
+wsstream << f.value;
+std::wstring wideString = wsstream.str();
+return {std::vector<wchar_t>(wideString.begin(), wideString.end())};
+
+
+#start dat Float128
+#include Float128_1
+struct Float128 {__float128 value;};
+
+#start fun Float128_1 float value Float128
+#include Float128
+Float128 Float128_1(double a)
+return Float128{static_cast<__float128>(a)};
+
+#start fun Float128_inc_unr_0 Float128 value Float128
+#include Float128
+#include Float128_1
+Float128 Float128_inc_unr_0(Float128 &value)
+value.value = value.value + 1;
+return Float128{value.value - 1};
+
+#start fun Float128_inc_unl_0 Float128 value Float128
+#include Float128
+#include Float128_1
+Float128 Float128_inc_unl_0(Float128 &value)
+value.value = value.value + 1;
+return value;
+
+#start fun Float128_dec_unr_0 Float128 value Float128
+#include Float128
+#include Float128_1
+Float128 Float128_dec_unr_0(Float128 &value)
+value.value = value.value - 1;
+return Float128{value.value + 1};
+
+#start fun Float128_dec_unl_0 Float128 value Float128
+#include Float128
+#include Float128_1
+Float128 Float128_dec_unl_0(Float128 &value)
+value.value = value.value - 1;
+return value;
+
+#start fun Float128_sub_unl_0 Float128 value Float128
+#include Float128
+#include Float128_1
+Float128 Float128_sub_unl_0(const Float128 &value)
+return Float128{-value.value};
+
+#start fun Float128_add_unl_0 Float128 value Float128
+#include Float128
+#include Float128_1
+Float128 Float128_dec_unl_0(const Float128 &value)
+return value;
+
+#start fun Float128_mul_bin_0 Float128 a Float128 b Float128
+#include Float128
+#include Float128_1
+Float128 Float128_mul_bin_0(const Float128 &a, const Float128 &b)
+return Float128{a.value * b.value};
+
+#start fun Float128_div_bin_0 Float128 a Float128 b Float128
+#include Float128
+#include Float128_1
+#include Float128_sub_unl_0
+Float128 Float128_div_bin_0(const Float128 &a, const Float128 &b)
+return Float128{a.value / b.value};
+
+#start fun Float128_mod_bin_0 Float128 a Float128 b Float128
+#include Float128
+#include Float128_1
+#include<cmath
+Float128 Float128_mod_bin_0(const Float128 &a, const Float128 &b)
+return Float128{fmod(a.value, b.value)};
+
+#start fun Float128_add_bin_0 Float128 a Float128 b Float128
+#include Float128
+#include Float128_1
+Float128 Float128_add_bin_0(const Float128 &a, const Float128 &b)
+return Float128{a.value + b.value};
+
+#start fun Float128_sub_bin_0 Float128 a Float128 b Float128
+#include Float128
+#include Float128_1
+Float128 Float128_sub_bin_0(const Float128 &a, const Float128 &b)
+return Float128{a.value - b.value};
+
+#start fun Float128_lt_bin_0 Float128 a Float128 b Boolean
+#include Float128
+#include Float128_1
+#include Boolean
+Boolean Float128_lt_bin_0(const Float128 &a, const Float128 &b)
+return Boolean{a.value < b.value};
+
+#start fun Float128_gt_bin_0 Float128 a Float128 b Boolean
+#include Float128
+#include Float128_1
+#include Boolean
+Boolean Float128_gt_bin_0(const Float128 &a, const Float128 &b)
+return Boolean{a.value > b.value};
+
+#start fun Float128_le_bin_0 Float128 a Float128 b Boolean
+#include Float128
+#include Float128_1
+#include Boolean
+Boolean Float128_le_bin_0(const Float128 &a, const Float128 &b)
+return Boolean{a.value <= b.value};
+
+#start fun Float128_ge_bin_0 Float128 a Float128 b Boolean
+#include Float128
+#include Float128_1
+#include Boolean
+Boolean Float128_ge_bin_0(const Float128 &a, const Float128 &b)
+return Boolean{a.value >= b.value};
+
+#start fun Float128_eq_bin_0 Float128 a Float128 b Boolean
+#include Float128
+#include Float128_1
+#include Boolean
+Boolean Float128_eq_bin_0(const Float128 &a, const Float128 &b)
+return Boolean{a.value == b.value};
+
+#start fun Float128_ne_bin_0 Float128 a Float128 b Boolean
+#include Float128
+#include Float128_1
+#include Boolean
+Boolean Float128_ne_bin_0(const Float128 &a, const Float128 &b)
+return Boolean{a.value != b.value};
+
+#start fun Float128_and_bin_0 Float128 a Float128 b Boolean
+#include Float128
+#include Float128_1
+#include Boolean
+Boolean Float128_and_bin_0(const Float128 &a, const Float128 &b)
+return Boolean{a.value && b.value};
+
+#start fun Float128_orr_bin_0 Float128 a Float128 b Boolean
+#include Float128
+#include Float128_1
+#include Boolean
+Boolean Float128_or_log_0(const Float128 &a, const Float128 &b)
+return Boolean{a.value || b.value};
+
+#start fun Float128_to_Int8_7 Float128 value Int8
+#include Int8
+#include Float128
+Int8 Float128_to_Int8_7(const Float128 &input)
+return Int8{static_cast<char>(input.value)};
+
+#start fun Float128_to_Int16_7 Float128 value Int16
+#include Int16
+#include Float128
+Int16 Float128_to_Int16_7(const Float128 &input)
+return Int16{static_cast<short>(input.value)};
+
+#start fun Float128_to_Int32_7 Float128 value Int32
+#include Int32
+#include Float128
+Int32 Float128_to_Int32_7(const Float128 &input)
+return Int32{static_cast<int>(input.value)};
+
+#start fun Float128_to_Int64_7 Float128 value Int64
+#include Int64
+#include Float128
+Int64 Float128_to_Int64_7(const Float128 &input)
+return Int64{static_cast<long long>(input.value)};
+
+#start fun Float128_to_Int128_7 Float128 value Int128
+#include Float128
+#include Int128
+Int128 Float128_to_Int128_7(const Float128 &input)
+return Int128{static_cast<__int128>(input.value)};
+
+#start fun Float128_to_Boolean_7 Float128 value Boolean
+#include Float128
+#include Boolean
+Boolean Float128_to_Boolean_7(const Float128 &input)
+return Boolean{input.value != 0};
+
+#start fun Float128_to_Float32_7 Float128 value Float32
+#include Float128
+#include Float32
+Float32 Float128_to_Float32_7(const Float128 &input)
+return Float32{static_cast<float>(input.value)};
+
+#start fun Float128_to_Float64_7 Float128 value Float64
+#include Float128
+#include Float64
+Float64 Float128_to_Float64_7(const Float128 &input)
+return Float64{static_cast<double>(input.value)};
+
+#start fun Float128_to_String_7 Float128 value String
+#include Float128
+#include String
+#include<sstream
+String Float128_to_String_7(const Float128& f)
+std::wstringstream wsstream;
+wsstream << static_cast<double>(f.value);
+std::wstring wideString = wsstream.str();
+return {std::vector<wchar_t>(wideString.begin(), wideString.end())};
+
+
+#start dat Boolean
+#include Boolean_1
+struct Boolean {bool value;};
+
+#start fun Boolean_1 bool value Boolean
+#include Boolean
+Boolean Boolean_1(bool a)
+return Boolean{a};
+
+#start fun Boolean_nd_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+Boolean Boolean_nd_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{static_cast<bool>(a.value & b.value)};
+
+#start fun Boolean_xor_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+Boolean Boolean_xor_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{static_cast<bool>(a.value ^ b.value)};
+
+#start fun Boolean_or_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+Boolean Boolean_or_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{static_cast<bool>(a.value | b.value)};
+
+#start fun Boolean_not_unl_0 Boolean value Boolean
+#include Boolean
+#include Boolean_1
+Boolean Boolean_not_unl_0(const Boolean &value)
+return Boolean{!value.value};
+
+#start fun Boolean_lt_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+#include Boolean
+Boolean Boolean_lt_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{a.value < b.value};
+
+#start fun Boolean_gt_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+#include Boolean
+Boolean Boolean_gt_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{a.value > b.value};
+
+#start fun Boolean_le_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+#include Boolean
+Boolean Boolean_le_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{a.value <= b.value};
+
+#start fun Boolean_ge_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+#include Boolean
+Boolean Boolean_ge_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{a.value >= b.value};
+
+#start fun Boolean_eq_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+#include Boolean
+Boolean Boolean_eq_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{a.value == b.value};
+
+#start fun Boolean_ne_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+#include Boolean
+Boolean Boolean_ne_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{a.value != b.value};
+
+#start fun Boolean_and_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+#include Boolean
+Boolean Boolean_and_bin_0(const Boolean &a, const Boolean &b)
+return Boolean{a.value && b.value};
+
+#start fun Boolean_orr_bin_0 Boolean a Boolean b Boolean
+#include Boolean
+#include Boolean_1
+#include Boolean
+Boolean Boolean_or_log_0(const Boolean &a, const Boolean &b)
+return Boolean{a.value || b.value};
+
+#start fun Boolean_to_Int16_7 Boolean value Int16
+#include Int16
+#include Boolean
+Int16 Boolean_to_Int16_7(const Boolean &input)
+return Int16{static_cast<short>(input.value)};
+
+#start fun Boolean_to_Int32_7 Boolean value Int32
+#include Int32
+#include Boolean
+Int32 Boolean_to_Int32_7(const Boolean &input)
+return Int32{static_cast<int>(input.value)};
+
+#start fun Boolean_to_Int64_7 Boolean value Int64
+#include Int64
+#include Boolean
+Int64 Boolean_to_Int64_7(const Boolean &input)
+return Int64{static_cast<long long>(input.value)};
+
+#start fun Boolean_to_Int128_7 Boolean value Int128
+#include Boolean
+#include Int128
+Int128 Boolean_to_Int128_7(const Boolean &input)
+return Int128{static_cast<__int128>(input.value)};
+
+#start fun Boolean_to_Int8_7 Boolean value Int8
+#include Int8
+#include Boolean
+Int8 Boolean_to_Int8_7(const Boolean &input)
+return Int8{input.value != 0};
+
+#start fun Boolean_to_Float32_7 Boolean value Float32
+#include Boolean
+#include Float32
+Float32 Boolean_to_Float32_7(const Boolean &input)
+return Float32{static_cast<float>(input.value)};
+
+#start fun Boolean_to_Float64_7 Boolean value Float64
+#include Boolean
+#include Float64
+Float64 Boolean_to_Float64_7(const Boolean &input)
+return Float64{static_cast<double>(input.value)};
+
+#start fun Boolean_to_Float128_7 Boolean value Float128
+#include Boolean
+#include Float128
+Float128 Boolean_to_Float128_7(const Boolean &input)
+return Float128{static_cast<__float128>(input.value)};
+
+#start fun Boolean_to_String_7 Boolean value String
+#include Boolean
+#include String_1
+String Boolean_to_String_7(const Boolean &input)
+if (input.value) return String_1(L"true");
+return String_1(L"false");
+
+
+#start dat String
+#include<vector
+#include<string
+#include String
+#main setlocale(LC_ALL, ".UTF8");
+struct String {std::vector<wchar_t> value;};
+
+#start fun String_1 string value String
+#include String
+String String_1(const std::wstring &str)
+String self;
+(&self)->value.assign(str.begin(),str.end());
+return self;
+
+#start fun String_add_bin_0 String a String b String
+#include String
+#include String_1
+String String_add_bin_0(const String& a, const String& b)
+String result;
+result.value.reserve(a.value.size() + b.value.size());
+result.value.insert(result.value.end(), a.value.begin(), a.value.end());
+result.value.insert(result.value.end(), b.value.begin(), b.value.end());
+return result;
+
+#start fun String_eq_bin_0 String a String b Boolean
+#include String
+Boolean String_eq_bin_0(const String& a, const String& b)
+return Boolean{a.value == b.value};
+
+#start fun String_ne_bin_0 String a String b Boolean
+#include String
+Boolean String_ne_bin_0(const String& a, const String& b)
+return Boolean{a.value != b.value};
+
+#start fun String_to_Int64_7 String value Int64
+#include Int64
+#include String
+Int64 String_to_Int64_7(String str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+Int64 result;
+result.value = std::stol(wideStr);
+return result;
+
+#start fun String_to_Int32_7 String value Int32
+#include Int32
+#include String
+Int32 String_to_Int32_7(const String &str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+Int32 result;
+result.value = std::stoi(wideStr);
+return result;
+
+#start fun String_to_Int16_7 String value Int16
+#include Int16
+#include String
+Int16 String_to_Int16_7(const String &str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+Int16 result;
+result.value = static_cast<short>(std::stoi(wideStr));
+return result;
+
+#start fun String_to_Int8_7 String value Int8
+#include Int8
+#include String
+Int8 String_to_Int8_7(const String &str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+Int8 result;
+result.value = static_cast<char>(std::stoi(wideStr));
+return result;
+
+#start fun String_to_Float32_7 String value Float32
+#include Float32
+#include String
+Float32 String_to_Float32_7(const String &str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+Float32 result;
+result.value = std::stof(wideStr);
+return result;
+
+#start fun String_to_Float64_7 String value Float64
+#include Float64
+#include String
+Float64 String_to_Float64_7(const String &str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+Float64 result;
+result.value = std::stod(wideStr);
+return result;
+
+#start fun String_to_Boolean_7 String value Boolean
+#include Boolean
+#include String
+Boolean String_to_Boolean_7(const String &str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+Boolean result;
+result.value = (wideStr == L"true");
+return result;
+
+#start fun String_to_Int128_7 String value Int128
+#include Int128
+#include String
+Int128 String_to_Int128_7(String str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+__int128 result = 0;
+for(auto it = wideStr.begin(); it != wideStr.end(); ++it)
+result = result * 10 + (*it - L'0');
+Int128 ret;
+ret.value = result;
+return ret;
+
+#start fun String_to_Float128_7 String value Float128
+#include Float128
+#include String
+Float128 String_to_Float128_7(String str)
+std::wstring wideStr(str.value.begin(), str.value.end());
+Float128 result;
+result.value = std::stold(wideStr); // std::stold converts to long double
+return result;

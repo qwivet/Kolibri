@@ -504,119 +504,102 @@ To use your function, you just call it by its name and provide the necessary 'in
 FunctionName(expression1, expression2, expression3);
 ```
 
-## Pointers and Their Control System in Kolibri
+## Pointers and the system of their management in Kolibri
 
-### What are Pointers?
+### What are pointers?
 
-Imagine you have a box somewhere in your room. Instead of going to the box every time you need something from it, you can use a "map" that directly points to this box. This map is what we call a "pointer" in programming. It points to the location in memory where your data (the box) is stored.
+Imagine you have a box in your room. Instead of going to it every time you need something, you can use a "map" that points directly to that box. This map is what we call a "pointer" in programming. It points to the location in memory where your data is stored (the box).
 
-### Naming (Dereferencing) and Pointing To (Referencing)
-
-- **Naming or Dereferencing (`<pointer>`)** means you're looking inside the box. You're getting the actual data the pointer is pointing to.
+### Naming (dereferencing) and pointing to (referencing)
   
-- **Pointing To or Referencing (`>variable<`)** is creating that map to your box. You're getting the location of your data in memory.
+- ** (`<variable>)** is to create a map of your box. You get the location of your data in memory.
+
+- The dereferencing is automatic and means that you look inside the window. You get the actual data that the pointer points to.
 
 ### Syntax
 
-1. **Creating a Pointer**
+1. **Create a pointer**.
     ```c#
-    pointer = >variable<;
-    ```
-
-2. **Dereferencing a Pointer**
-    ```c#
-    <pointer>
+    pointer = <variable>;
     ```
    
 ### Rules
 
-1. **Null Pointers**: In Kolibri, you can't have a pointer that doesn't point to anything. It must always have a destination.
+1. **Null pointers**: There can be no pointer in Hummingbird that points to nothing. It must always have a destination.
   
-2. **Pointer to Pointer**: Kolibri says "Hell no!" You can't have pointers pointing to other pointers, unless you're working with dynamic arrays (covered later).
+2. **Pointer to a pointer**: You cannot have pointers pointing to other pointers unless you are working with dynamic arrays (more on this later).
 
-### Examples
+### Example
 
 ```c#
 a = 7;
-b = >a<;
-c = >b<; // This will throw an error
+b = <a>;
+c = <b>; // c is a dictator (next theme)
 ```
 
-## Kolibri's Revolutionary Pointer Control System - Dictatorship Model
+## The Hummingbird pointer management system is a model of dictatorship
 
-### The Basics
+### Basics
 
-It dictates which pointer gets the right to rule and change the variable it's pointing at. It's all about control and accountability, making sure you're not playing fast and loose with your memory locations.
+This model is essentially a way of managing pointers. It dictates which pointer gets to control and modify the variable it points to. It's all about control and accountability, ensuring that you can't have issues with memory deletion and control
 
-### Terms
+### Терміни
 
-- **Owner**: The original keeper of the data.
-- **Usurped**: Original owner but with read-only access.
-- **Dictator**: The one who snatches the write-access from the original owner.
-- **Overthrown**: A former dictator without write-access.
+- **Owner**: The original owner of the data.
+- **Usurped**: The original owner, but with read-only access.
+- **Dictator**: Someone who intercepts access to a record from the original owner or dictator.
+- **Overthrowned**: A former dictator without the right to record.
 - **Henchman**: A secondary pointer with read-only access.
 
-### Examples
+### Приклади
 
-**Single Dictator**
+**Dictator**
 
 ```kolibri
 a = 7; // owner
-b = >a<; // `a` is usurped, `b` is the dictator pointer to a
+b = <a>; // `a` usurped, `b` - dictator pointer a
 ```
 
-**Overthrowing a Dictator**
+**Overthrowing a dictator**
 
 ```kolibri
-c = >b<; // `b` is overthrown now, `c` is the dictator to `a`
+c = <b>; // `b` повалено, `c` - диктатор на `a`
 ```
 
-**Multiple Henchmen**
+**Multiple henchmen**
 
 ```kolibri
-=d = >c<; // `d` is a henchman to `a`, `c` is the dictator to `a` now
+=d = <c>; // `d` - henchman, `c` - dictator
 ```
 
-### Conditional Context
+### Context
 
 ```kolibri
-a = 7;
-b = >a<;
-if a == 5 {
-    c = b; // `b` is now read-only, `c` rules
-} // c is destroyed, `b` rules again
-```
-
-### Returning Pointers from Functions
-
-```kolibri
-a = 1;
-b = >a<;
-if a == 0: c = Boo(); // b is overthrown by c
-else Boo(b); // b remains dictator
-
 Boo() {
     a = 7;
-    => >a<;
-}
+    b = <a>;
+    if a == 5 {
+        c = <b>; // `b` readonly, `c` dictator
+    } // c delete, `b` dictator
+}// b, a delete;
 ```
 
-### Restrictions
+### Limitations
 
-You can't overthrow or return foreign dictators inside a function:
+You cannot drop or return foreign dictators inside a function:
 
 ```kolibri
-Boo(a:<long>) b = a; // Error: cannot overthrow foreign
-Boo(a:<long>) => a; // Error: cannot return foreign
+Boo(a:<long>) b = <a>; // Error: you cannot redefine a foreigner
+Foo(a:<long>) => <a>; // Mistake: you cannot return a foreigner
 ```
 
-### Dynamic Ownership
+### Dinamic dictator
 
 ```kolibri
 a = 1;
 b = 2;
-c = >a<; // c is dictator for a ownership
-c = >b<; // c is dictator for b ownership, a is back to being the owner
+c = <a>; // c is dictator of a
+c = <b>; // c - dictator for b, a owner
 ```
 
 ## Data Containers in Kolibri
