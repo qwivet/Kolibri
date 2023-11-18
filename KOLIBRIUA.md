@@ -45,7 +45,7 @@ C:\LB\lib.lbc
 
 ```c#
 if args[0]::long == 0 || args[0]::long == 1: => 1;
-=> Main([(args[0]::long - 1)::string]);
+=> Main([(args[0]::long - 1)::string])::long * args[0]::long;
 ```
 
 ### Бібліотеки: `.lbc'
